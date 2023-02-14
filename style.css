@@ -1,0 +1,422 @@
+html,
+body {
+  display: flex;
+  margin: 0px;
+}
+
+html {
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+body {
+  background: radial-gradient(circle at center, #fffeea 0%, #fffeea 35%, #b7e8eb 100%);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'IMFellrm', serif;
+}
+
+@font-face {
+    font-family: treasureMapDeadhand;
+    src: url(./assets/fonts/TreasureMapDeadhand-yLA3.ttf);
+  }
+
+@font-face {
+    font-family: IMFellit;
+    src: url(./assets/fonts/IMFeDPit28P.ttf)
+}
+
+@font-face {
+    font-family: IMFellrm;
+    src: url(./assets/fonts/IMFeDPrm28P.ttf)
+}
+.ocean {
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #015871;
+  z-index: -1;
+}
+
+.wave {
+  background: url(https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg) repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+@keyframes swell {
+  0%,
+	100% {
+    transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+.endWave{
+	display:none;
+}
+
+.loginBox {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    /* background: rgba(255, 255, 255, 0.46); */
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-around;
+    flex: 0.5;
+    margin: 20px;
+    width: 65%;
+}
+
+.registerBox {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  /* background: rgba(255, 255, 255, 0.46); */
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: space-around;
+  flex: 0.75;
+  margin: 20px;
+  width: 75%;
+  padding: 100px;
+}
+
+#registerButton {
+    align-self: flex-start;
+    display: flex;
+    font-family: IMFellrm;
+    font-size: medium;
+}
+
+.loginLine {
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.registerLine {
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.loginButtonLine {
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#loginButton {
+    align-self: flex-end;
+    display: flex;
+    font-family: 'IMFellrm', serif;
+    font-size: medium;
+}
+
+.container1 {
+    flex-direction: column;
+    display: flex;
+    width: 100vw;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-family: treasureMapDeadhand;
+    font-weight: 300;
+    font-size: 85px;
+    letter-spacing: -0.1ch;
+  margin-right: 3%;
+}
+
+.logo2 {
+  font-family: treasureMapDeadhand;
+  font-weight: 300;
+  font-size: 55px;
+  letter-spacing: -0.1ch;
+  margin-left: 3%;
+  align-self: center;
+}
+
+.loginField {
+    margin-left: 10px;
+    font-family: 'IMFellrm', serif;
+    font-size: medium;
+   
+}
+
+.justBG {
+    display: flex;
+    flex: 0.5;
+    flex-direction: column;
+    background-image: url(./assets/parchment.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: space-around;
+    flex-shrink: 0;
+}
+
+.justBG2 {
+  display: flex;
+  flex-direction: column;
+  background-image: url(./assets/parchment.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: space-around;
+  white-space: nowrap;
+  flex: 0.6;
+}
+
+#tagline {
+    font-family: IMFellit;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10;
+}
+
+#container {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+}
+
+#innercontainer {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 3%;
+  /* padding: 0% 3% 0% 3%; */
+}
+
+#sidebar {
+  display: flex;
+  width: 15%;
+  flex-grow: 3;
+  background-color: #006a88;
+  justify-content: flex-start;
+  padding: 15px 0px 3px 0px;
+  flex-direction: column;
+  border-radius: 10px;
+  font-size: larger;
+  height: fit-content;
+  margin-right: 1%;
+  box-shadow: 2px 2px 3px grey;
+}
+
+.userInfo {
+  align-self: center;
+  background-color: rgb(228, 228, 228);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 25px;
+  align-items: center;
+  text-align: center;
+  justify-content:center;
+  border-top: #7dcfb6 5px solid;
+  border-bottom: #7dcfb6 5px solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#feed {
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  height: 100%;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(228, 228, 228);
+  border-bottom: #7dcfb6 5px solid;
+  box-shadow: 2px 2px 3px grey;
+}
+
+.navButtons {
+  height: 50px;
+  width: 50px;
+}
+
+.post {
+  display: flex;
+  background-color: whitesmoke;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 2px 2px 3px grey;
+  flex-direction: column;
+  font-size: larger;
+}
+
+.comment {
+  background-color: rgb(228, 228, 228);
+  padding: 20px;
+  margin: 10px;
+  margin-left: 50px;
+  flex: 0.7;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.profileAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 65px;
+  align-self: center;
+  border: #7dcfb6 5px dotted;
+  margin: 15px 15px 0px 15px;
+}
+
+.profileUser {
+  align-self: center;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: 400;
+  color: #7dcfb6;
+  padding-top: 10px;
+}
+
+.postAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  border: 2px solid #015871;
+}
+
+.postUser {
+  align-self: center;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #006a88;
+}
+
+.postTime {
+  display: inline;
+  align-self: center;
+  color: grey;
+}
+
+.postTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.postAuthor {
+  display: inline-flex;
+}
+
+.postText {
+  padding: 15px;
+}
+
+.postActions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.commentStuff {
+  display: inline;
+  align-items: center;
+}
+
+.commentUser {
+  font-weight: 600;
+  display: inline;
+  text-decoration: none;
+  color: black;
+}
+
+.commentTime {
+  color: darkgray;
+  align-items: flex-end;
+}
+
+.likeStuff {
+  display: inline;
+}
+
+.likeButton {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+#newPostBox {
+  width: 30vw;
+  resize: none;
+  height: 5em;
+}
+
+.newPost {
+  display: inline-flex;
+  margin: 20px 20px 0px 20px;
+  justify-content: flex-start;
+}
+
+#profileStats {
+  background-color: whitesmoke;
+  text-align: left;
+  margin-top: 10px;
+  font-size: larger;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+#username {
+  font-size: x-large;
+  color: white;
+  text-align: center;
+  margin: 10px;
+}
+
+#logos {
+  align-self: center;
+  margin-right: 3%;
+}
+
+.error {
+  background-color: rgb(255, 126, 126);
+}
+
