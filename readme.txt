@@ -1,3 +1,8 @@
+Find My Matey is a social media website for pirates.
+
+
+This is a collaborative website for the course INFX 371 at the University of Louisiana at Lafayette.
+
 Here are the usernames, emails, and passwords for the default users:
 
 (e-mail, username, full name, password)
