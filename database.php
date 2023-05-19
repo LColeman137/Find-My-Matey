@@ -1,8 +1,8 @@
 <?php
 session_start();
 $HOST = "localhost";
-$USERNAME = "INFX371";
-$PASSWORD = "P*ssword";
+$USERNAME = "root";
+$PASSWORD = "";
 $DB_NAME = "find_my_matey";
 $conn = new mysqli($HOST, $USERNAME, $PASSWORD, $DB_NAME);
 
