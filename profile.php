@@ -34,9 +34,10 @@ $username = $_GET["user"];
             $friendResult = $friendStmt->fetch_all();
             $userStmt = $conn->query("SELECT user.username, COUNT(post_id) FROM post JOIN user " .
                 "ON post.username = '$username'");
-            //query the user's likes
+            //query the logged in user's likes
+            $logged_user = $_SESSION["username"];
             $userLikes = ($conn->query("SELECT COUNT(*) AS likes FROM `like` JOIN `user` ON like.username = user.username " .
-                "JOIN `post` ON post.post_id = like.post_id WHERE post.username = '$username'"))->fetch_assoc();
+                "JOIN `post` ON post.post_id = like.post_id WHERE post.username = '$logged_user'"))->fetch_assoc();
             echo "<img class=profileAvatar src=$user[avatar] alt=profile_pic>"; //avatar
             echo "<div class=profileUser>$user[first_name] "; //first_name
             echo "$user[last_name] </div>"; //last_name
